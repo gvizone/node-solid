@@ -9,7 +9,7 @@ const productRoutes = Router();
 productRoutes.get('/', listProductController.handle);
 productRoutes.get('/user/:userId', listProductByUserController.handle);
 productRoutes.post('/', createProductController.handle);
-productRoutes.delete(':id', () => 'A definir');
+productRoutes.delete(':id', () => 'A definir'); // TODO: Delete product
 productRoutes.put('/:id', editProductController.handle);
 
 export default productRoutes;
