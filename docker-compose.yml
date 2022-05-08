@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mysqlEcommerce:
+    image: mysql:5.7
+    hostname: mysql
+    restart: always
+    container_name: mysqlEcommerce
+    ports:
+      - '3306:3306'
+    volumes:
+      - /var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_DATABASE: ecommerce
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
