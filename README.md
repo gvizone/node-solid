@@ -1,7 +1,22 @@
-# Awesome Project Build with TypeORM
+# Projeto Buscado de Produtos
 
-Steps to run this project:
+## Produtos
 
-1. Run `npm i` command
-2. Setup database settings inside `ormconfig.json` file
-3. Run `npm start` command
+- Cadastro de produto
+- Edição de produto
+- Listagem de produtos
+- Busca de produto por id de usuário
+
+## Usuários
+
+- Cadastro de Usuario
+- Edição de usuário
+- Listagem de usuários
+
+## Projeto Node + Typeorm
+
+Passos para rodar o projeto:
+
+1. Rodar o comando `npm install`
+2. Configurar banco de dados na pasta `ormconfig.json`
+3. Rodar o comando `npm start`
