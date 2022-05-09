@@ -1,6 +1,6 @@
 import { User } from '../../entity/User';
 import { IUsersRepository } from '../IUsersRepository';
-import { getRepository, Repository } from 'typeorm';
+import { getRepository } from 'typeorm';
 
 export class UsersRepositoryImpl implements IUsersRepository {
   findAll(): Promise<User[]> {
@@ -17,10 +17,8 @@ export class UsersRepositoryImpl implements IUsersRepository {
   }
   async edit(id: number, user: User): Promise<User> {
     const db = getRepository(User);
-    let userExits = await db.findOne(id);
-
-    userExits = { ...userExits, ...user };
-
-    return db.save(userExits);
+    let userExists = await db.findOne(id);
+    userExists = { ...userExists, ...user };
+    return db.save(userExists);
   }
 }

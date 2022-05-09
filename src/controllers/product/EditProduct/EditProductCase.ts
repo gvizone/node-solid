@@ -5,8 +5,8 @@ import { EditProductDTO } from './EditProductDTO';
 
 class EditProductCase {
   constructor(
-    private productRepository: IProductRepository,
-    private userRespository: IUsersRepository
+    private readonly productRepository: IProductRepository,
+    private readonly userRespository: IUsersRepository
   ) {}
   async execute(id: number, data: EditProductDTO) {
     const user = await this.userRespository.findOne(data.userId);

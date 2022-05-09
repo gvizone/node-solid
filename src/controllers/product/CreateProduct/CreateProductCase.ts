@@ -5,8 +5,8 @@ import { CreateProductDTO } from './CreateProductDTO';
 
 export class CreateProductCase {
   constructor(
-    private productsRepository: IProductRepository,
-    private userRespository: IUsersRepository
+    private readonly productsRepository: IProductRepository,
+    private readonly userRespository: IUsersRepository
   ) {}
 
   async execute(data: CreateProductDTO) {

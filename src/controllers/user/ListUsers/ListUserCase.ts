@@ -1,7 +1,7 @@
 import { IUsersRepository } from '../../../repositories/IUsersRepository';
 
 class ListUserCase {
-  constructor(private usersRepository: IUsersRepository) {}
+  constructor(private readonly usersRepository: IUsersRepository) {}
   async execute() {
     return await this.usersRepository.findAll();
   }
